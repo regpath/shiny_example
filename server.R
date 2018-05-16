@@ -1,8 +1,4 @@
 function(input, output) {
-
-
-
-
 	output$plot1 <- renderPlot({
 		# plot(Days_Failure_Count())
 		plot(c(1,2,3,4,5))
