@@ -8,10 +8,10 @@ function(input, output) {
 
 	Inventory_Level_st = Inventory_Level_ed = vector()
 	Inventory_Level_st[1]=Stock_level
-	Inventory_Level_ed[1]=Inventory_Level_st[1] - Days_Failure_Count[1] + Replenish_Level[1]
+	Inventory_Level_ed[1]=Inventory_Level_st[1] - Days_Failure_Count()[1] + Replenish_Level[1]
 	for (i in 2:365) {
 		Inventory_Level_st[i]=Inventory_Level_ed[i-1];
-		Inventory_Level_ed[i]=Inventory_Level_st[i] - Days_Failure_Count[i] + Replenish_Level[i]
+		Inventory_Level_ed[i]=Inventory_Level_st[i] - Days_Failure_Count()[i] + Replenish_Level[i]
 	}
 	
 	
