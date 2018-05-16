@@ -20,13 +20,6 @@ fluidPage(
                "number of observations, the summary will still be based",
                "on the full dataset."),
 
-      # Input: actionButton() to defer the rendering of output ----
-      # until the user explicitly clicks the button (rather than
-      # doing it immediately when inputs change). This is useful if
-      # the computations required to render output are inordinately
-      # time-consuming.
-      actionButton("update", "Update View")
-
     ),
 
     # Main panel for displaying outputs ----
@@ -34,11 +27,11 @@ fluidPage(
 
       # Output: Header + summary of distribution ----
       h4("Daily Failure Count"),
-      plotOutput("plot1"),
+      plotOutput("output$plot1"),
 
       # Output: Header + table of distribution ----
       h4("Daily Inventory Level"),
-      tableOutput("plot2")
+      tableOutput("output$plot2")
     )
 
   )

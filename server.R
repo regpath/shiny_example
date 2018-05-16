@@ -3,7 +3,7 @@ function(input, output, session) {
 	output$plot1 <- renderPlot({
 		Stock_level = input$initial;                                   
 
-		Days_Failure_Count = rpois(365,initial$lambda)
+		Days_Failure_Count = rpois(365,input$lambda)
 		Replenish_Level = rep(0,365)
 		Replenish_Level[35:365] = Days_Failure_Count[1:(365-34)]
 
