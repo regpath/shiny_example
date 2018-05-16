@@ -33,12 +33,12 @@ fluidPage(
     mainPanel(
 
       # Output: Header + summary of distribution ----
-      h4("Summary"),
-      verbatimTextOutput("summary"),
+      h4("Daily Failure Count"),
+      plotOutput("plot1"),
 
       # Output: Header + table of distribution ----
-      h4("Observations"),
-      tableOutput("view")
+      h4("Daily Inventory Level"),
+      tableOutput("plot2")
     )
 
   )
