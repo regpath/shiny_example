@@ -31,7 +31,7 @@ function(input, output) {
 	return(c(Total_Shortage_Volume, Total_Shortage_Day_Count, Shortage_Prob))
 	}
 	
-	Montly = function() {
+	Monthly = function() {
 		Monthly_Occur = vector();
 		Monthly_Occur[1]=sum(Days_Failure_Count()[1:31]);
 		Monthly_Occur[2]=sum(Days_Failure_Count()[32:59]);
@@ -60,7 +60,7 @@ function(input, output) {
 	output$table1 <- renderTable({ Montly()[[1]] })
 	output$text5 <- renderText({ paste("Maximum Failure: ",Monthly()[[2]],sep="") })
 	output$text6 <- renderText({ paste("Mean Failure: ",Monthly()[[3]],sep="") })
-	output$text7 <- renderText({ paste("Minimum Failure: ",Monthly()[[2]],sep="") })
+	output$text7 <- renderText({ paste("Minimum Failure: ",Monthly()[[4]],sep="") })
 	output$text1 <- renderText({ paste("Stock Level: ", Stock_level(), sep="") })
 	output$text2 <- renderText({ paste("Annual Shortage: ",Shortage()[1],sep="") })
 	output$text3 <- renderText({ paste("Annual Shortage Days: ",Shortage()[2],sep="") })
