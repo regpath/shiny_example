@@ -57,7 +57,7 @@ function(input, output) {
 		plot(Inventory_Level())
 	})	
 	
-	output$table1 <- renderDataTable({ Montly()[[1]] })
+	output$table1 <- renderTable({ Montly()[[1]] })
 	output$text5 <- renderText({ paste("Maximum Failure: ",Monthly()[[2]],sep="") })
 	output$text6 <- renderText({ paste("Mean Failure: ",Monthly()[[3]],sep="") })
 	output$text7 <- renderText({ paste("Minimum Failure: ",Monthly()[[2]],sep="") })
