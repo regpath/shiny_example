@@ -45,9 +45,9 @@ function(input, output) {
 		Monthly_Occur[10]=sum(Days_Failure_Count()[274:304]);
 		Monthly_Occur[11]=sum(Days_Failure_Count()[305:334]);
 		Monthly_Occur[12]=sum(Days_Failure_Count()[335:365]);
-		month_table = data.table(data.frame(matrix(Monthly_Occur,1,12)))
+		month_table = data.frame(matrix(Monthly_Occur,1,12))
 		colnames(month_table) = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
-		return(month_table)
+		return(list(month_table,max(Monthly_Occur),mean(Monthly_Occur),min(Monthly_Occur)))
 	}
 	
 	output$plot1 <- renderPlot({
@@ -57,7 +57,10 @@ function(input, output) {
 		plot(Inventory_Level())
 	})	
 	
-	output$table1 <- renderDataTable({ Montly() })
+	output$table1 <- renderDataTable({ Montly()[[1]] })
+	output$text5 <- renderText({ paste("Maximum Failure: ",Monthly()[[2]],sep="") })
+	output$text6 <- renderText({ paste("Mean Failure: ",Monthly()[[3]],sep="") })
+	output$text7 <- renderText({ paste("Minimum Failure: ",Monthly()[[2]],sep="") })
 	output$text1 <- renderText({ paste("Stock Level: ", Stock_level(), sep="") })
 	output$text2 <- renderText({ paste("Annual Shortage: ",Shortage()[1],sep="") })
 	output$text3 <- renderText({ paste("Annual Shortage Days: ",Shortage()[2],sep="") })
