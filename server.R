@@ -38,6 +38,8 @@ function(input, output) {
 		plot(Inventory_Level())
 	})	
 	
-	output$text <- renderText({ Shortage() })
-
+	output$text1 <- renderText({ paste("Stock Level: ", Stock_level(), sep="") })
+	output$text2 <- renderText({ paste("Annual Shortage: ",Shortage()[1],sep="") })
+	output$text3 <- renderText({ paste("Annual Shortage Days: ",Shortage()[2],sep="") })
+	output$text4 <- renderText({ paste("Shortage Probability: ",Shortage()[3],sep="") })
 }
