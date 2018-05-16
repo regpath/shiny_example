@@ -6,7 +6,7 @@ pageWithSidebar(
 
       # Input: Specify the number of observations to view ----
       numericInput("lambda", "Average daily failure count", 0.33)
-	},
+	,
 	mainPanel(
 
     h4("Daily Failure Count"),
