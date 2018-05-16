@@ -40,7 +40,7 @@ function(input, output) {
 		plot(Days_Failure_Count())
 		})
 	output$plot2 <- renderPlot({
-		plot(Inventory_Level_ed)
+		plot(Inventory_Level())
 		})	
 
 }
