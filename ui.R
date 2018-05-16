@@ -5,14 +5,19 @@ fluidPage(
 
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
+    # Sidebar panel for inputs ----
     sidebarPanel(
 
-      # Input: Slider for the number of bins ----
-      sliderInput(inputId = "bins",
-                  label = "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
+      # Input: Specify the number of observations to view ----
+      numericInput("initial", "Initial stock", 20),
+
+      # Input: Specify the number of observations to view ----
+      numericInput("lambda", "Average daily failure count", 0.33),
+
+      # Include clarifying text ----
+      helpText("Note: while the data view will show only the specified",
+               "number of observations, the summary will still be based",
+               "on the full dataset."),
 
     )
 ,
@@ -26,7 +31,7 @@ fluidPage(
 
       # Output: Header + table of distribution ----
       h4("Daily Inventory Level"),
-      tableOutput("plot2")
+      plotOutput("plot2")
     )
 
   )
