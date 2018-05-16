@@ -1,4 +1,4 @@
-bootstrapPage(
+fluidPage(
 
   # App title ----
   titlePanel("Input"),
