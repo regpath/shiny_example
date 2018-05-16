@@ -1,4 +1,4 @@
-function(input, output, session) {
+function(input, output) {
 	
 	output$plot1 <- renderPlot({
 		Stock_level = input$initial;                                   
