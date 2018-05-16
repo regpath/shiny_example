@@ -1,13 +1,13 @@
 pageWithSidebar(
-	sidebarPanel(
-      numericInput("initial", "Initial stock", 20),
-      numericInput("lambda", "Average daily failure count", 0.33)
-	)
-	,
-	mainPanel(
-    h4("Daily Failure Count"),
-    plotOutput("plot1"),
-    h4("Daily Inventory Level"),
-    plotOutput("plot2")
-	)
+  headerPanel('Iris k-means clustering'),
+  sidebarPanel(
+    selectInput('xcol', 'X Variable', names(iris)),
+    selectInput('ycol', 'Y Variable', names(iris),
+                selected=names(iris)[[2]]),
+    numericInput('clusters', 'Cluster count', 3,
+                 min = 1, max = 9)
+  ),
+  mainPanel(
+    plotOutput('plot1')
+  )
 )
