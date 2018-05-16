@@ -28,7 +28,7 @@ function(input, output) {
 			}
 		}
 		Shortage_Prob = Total_Shortage_Volume / (Total_Shortage_Volume + Total_Surplus_Volume)
-	return(c(Total_Shortage_Volume, Total_Shorage_Dat_Count, Shortage_Prob))
+	return(c(Total_Shortage_Volume, Total_Shortage_Day_Count, Shortage_Prob))
 	}
 	
 	output$plot1 <- renderPlot({
