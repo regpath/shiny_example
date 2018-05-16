@@ -4,6 +4,8 @@ fluidPage(
   titlePanel("Input"),
 
   # Sidebar layout with input and output definitions ----
+  sidebarLayout(
+
 ,
 
     # Main panel for displaying outputs ----
