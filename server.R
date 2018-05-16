@@ -35,4 +35,5 @@ function(input, output) {
 	output$plot2 <- renderPlot({
 		plot(Inventory_Level_ed)
 		})	
-		}
+
+}
