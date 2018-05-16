@@ -15,5 +15,5 @@ bootstrapPage(
 
       # Output: Header + table of distribution ----
       h4("Daily Inventory Level"),
-      plotOutput("plot2")
+    #  plotOutput("plot2")
     )
