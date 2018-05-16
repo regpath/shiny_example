@@ -13,7 +13,8 @@ function(input, output) {
 			Inventory_Level_st[i]=Inventory_Level_ed[i-1];
 			Inventory_Level_ed[i]=Inventory_Level_st[i] - Days_Failure_Count()[i] + Replenish_Level[i]
 		}
-	return(Inventory_Level_ed)
+	return(Daily_Failure_Count())
+	# return(Inventory_Level_ed)
 	}
 		
 	output$plot1 <- renderPlot({
