@@ -1,4 +1,5 @@
 pageWithSidebar(
+	headerPanel('Stock'),
   sidebarPanel(
     numericInput("initial", "Initial stock", 20),
     numericInput("lambda", "Average daily failure count", 0.33)
