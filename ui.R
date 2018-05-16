@@ -27,11 +27,11 @@ fluidPage(
 
       # Output: Header + summary of distribution ----
       h4("Daily Failure Count"),
-      plotOutput("output$plot1"),
+      plotOutput("plot1"),
 
       # Output: Header + table of distribution ----
       h4("Daily Inventory Level"),
-      tableOutput("output$plot2")
+      tableOutput("plot2")
     )
 
   )
