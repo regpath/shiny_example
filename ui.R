@@ -15,9 +15,6 @@ pageWithSidebar(
     h4("Daily Inventory Level"),
     plotOutput("plot2")
 	)
-	
-
-,
 
 
 )
