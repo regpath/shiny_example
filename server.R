@@ -33,18 +33,18 @@ function(input, output) {
 	
 	Montly = function() {
 		Monthly_Occur = vector();
-		Monthly_Occur[1]=sum(Days_Failure_Count[1:31]);
-		Monthly_Occur[2]=sum(Days_Failure_Count[32:59]);
-		Monthly_Occur[3]=sum(Days_Failure_Count[60:90]);
-		Monthly_Occur[4]=sum(Days_Failure_Count[91:120]);
-		Monthly_Occur[5]=sum(Days_Failure_Count[121:151]);
-		Monthly_Occur[6]=sum(Days_Failure_Count[152:181]);
-		Monthly_Occur[7]=sum(Days_Failure_Count[182:212]);
-		Monthly_Occur[8]=sum(Days_Failure_Count[213:243]);
-		Monthly_Occur[9]=sum(Days_Failure_Count[244:273]);
-		Monthly_Occur[10]=sum(Days_Failure_Count[274:304]);
-		Monthly_Occur[11]=sum(Days_Failure_Count[305:334]);
-		Monthly_Occur[12]=sum(Days_Failure_Count[335:365]);
+		Monthly_Occur[1]=sum(Days_Failure_Count()[1:31]);
+		Monthly_Occur[2]=sum(Days_Failure_Count()[32:59]);
+		Monthly_Occur[3]=sum(Days_Failure_Count()[60:90]);
+		Monthly_Occur[4]=sum(Days_Failure_Count()[91:120]);
+		Monthly_Occur[5]=sum(Days_Failure_Count()[121:151]);
+		Monthly_Occur[6]=sum(Days_Failure_Count()[152:181]);
+		Monthly_Occur[7]=sum(Days_Failure_Count()[182:212]);
+		Monthly_Occur[8]=sum(Days_Failure_Count()[213:243]);
+		Monthly_Occur[9]=sum(Days_Failure_Count()[244:273]);
+		Monthly_Occur[10]=sum(Days_Failure_Count()[274:304]);
+		Monthly_Occur[11]=sum(Days_Failure_Count()[305:334]);
+		Monthly_Occur[12]=sum(Days_Failure_Count()[335:365]);
 		month_table = data.table(data.frame(matrix(Montly_Occur,1,12)))
 		colnames(month_table) = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
 		return(month_table)
