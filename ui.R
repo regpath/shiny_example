@@ -7,7 +7,7 @@ pageWithSidebar(
 	mainPanel(
 		plotOutput('plot1'),
 		plotOutput('plot2'),
-		dataTableOutput('table'),
+		dataTableOutput('table1'),
 		textOutput('text1'),
 		textOutput('text2'),
 		textOutput('text3'),
