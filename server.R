@@ -10,7 +10,7 @@ function(input, output) {
 		Inventory_Level_st[1]=Stock_level()
 		Inventory_Level_ed[1]=Inventory_Level_st[1] - Days_Failure_Count()[1] + Replenish_Level[1]
 		for (i in 2:365) {
-			Inventory_Level_st[i]=Inventory_Level_ed[i-1];
+			Inventory_Level_st[i]=Inventory_Level_ed[i-1]
 			Inventory_Level_ed[i]=Inventory_Level_st[i] - Days_Failure_Count()[i] + Replenish_Level[i]
 		}
 	# return(Daily_Failure_Count())
@@ -21,7 +21,7 @@ function(input, output) {
 		Total_Shortage_Volume = Total_Surplus_Volume = Total_Shortage_Day_Count = 0
 		for (i in 1:365) {
 			if (Inventory_Level()[i] < 0) {
-				Total_Shortage_Volume = Total_Shortage_Volume + abs(Inventory_Level()[i]
+				Total_Shortage_Volume = Total_Shortage_Volume + abs(Inventory_Level()[i])
 				Total_Shortage_Day_Count = Total_Shortage_Day_Count + 1
 			} else {
 				Total_Surplus_Volume = Total_Surplus_Volume + Inventory_Level()[i]
