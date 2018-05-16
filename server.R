@@ -45,7 +45,7 @@ function(input, output) {
 		Monthly_Occur[10]=sum(Days_Failure_Count()[274:304]);
 		Monthly_Occur[11]=sum(Days_Failure_Count()[305:334]);
 		Monthly_Occur[12]=sum(Days_Failure_Count()[335:365]);
-		month_table = data.table(data.frame(matrix(Montly_Occur,1,12)))
+		month_table = data.table(data.frame(matrix(Monthly_Occur,1,12)))
 		colnames(month_table) = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
 		return(month_table)
 	}
