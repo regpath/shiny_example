@@ -57,7 +57,7 @@ function(input, output) {
 		plot(Inventory_Level())
 	})	
 	
-	output$table1 <- renderDataTable(Montly())
+	output$table1 <- renderTable(Montly())
 	output$text1 <- renderText({ paste("Stock Level: ", Stock_level(), sep="") })
 	output$text2 <- renderText({ paste("Annual Shortage: ",Shortage()[1],sep="") })
 	output$text3 <- renderText({ paste("Annual Shortage Days: ",Shortage()[2],sep="") })
