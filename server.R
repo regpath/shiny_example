@@ -1,5 +1,6 @@
 function(input, output) {
 
+if(FALSE) {
 	Stock_level = input$initial                                   
 
 	Days_Failure_Count = rpois(365,input$lambda)
@@ -27,9 +28,11 @@ function(input, output) {
 	# Inventory_Level_st[i]=Inventory_Level_ed[i-1];
 	# Inventory_Level_ed[i]=Inventory_Level_st[i] - Days_Failure_Count[i] + Replenish_Level[i]
 	# }
+}
 
 	output$plot1 <- renderPlot({
-		plot(Days_Failure_Count)
+		# plot(Days_Failure_Count)
+		plot(c(1,2,3,4,5))
 		})
 
 	# output$plot2 <- renderPlot({
