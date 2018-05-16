@@ -4,7 +4,7 @@ function(input, output) {
 	Days_Failure_Count = reactive(rpois(365,input$lambda))
 	
 	Replenish_Level = rep(0,365)
-	Replenish_Level[35:365] = Days_Failure_Count[1:(365-34)]
+	Replenish_Level[35:365] = Days_Failure_Count()[1:(365-34)]
 
 	Inventory_Level_st = Inventory_Level_ed = vector()
 	Inventory_Level_st[1]=Stock_level
